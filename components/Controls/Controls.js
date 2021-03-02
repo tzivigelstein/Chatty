@@ -8,13 +8,16 @@ const Controls = () => {
   const { sendMessage, selectedConversation } = useConversations()
   const [message, setMessage] = useState('')
   const setIsTyping = useUserTyping(
-    selectedConversation.recipients.map(r => r.id)
+    Array.isArray(selectedConversation.recipients) &&
+      selectedConversation.recipients.map(r => r.id)
   )
 
   const handleClick = () => {
+    console.log(typeof selectedConversation.recipients)
     if (message === '') return
     sendMessage(
-      selectedConversation.recipients.map(r => r.id),
+      Array.isArray(selectedConversation.recipients) &&
+        selectedConversation.recipients.map(r => r.id),
       message
     )
     setMessage('')

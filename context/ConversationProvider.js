@@ -24,6 +24,7 @@ export function ConversationProvider({ id, children }) {
   const socket = useSocket()
 
   function createConversation(recipients) {
+    console.log(recipients)
     setConversations(prevConversations => {
       return [...prevConversations, { recipients, messages: [] }]
     })
@@ -68,7 +69,6 @@ export function ConversationProvider({ id, children }) {
   const formmatedConversations =
     Array.isArray(conversations) &&
     conversations.map((conversation, index) => {
-      console.log(conversation.recipients)
       const recipients =
         Array.isArray(conversations) &&
         Array.isArray(conversation.recipients) &&

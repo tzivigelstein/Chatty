@@ -6,6 +6,23 @@ import { NewConversationButton, UserIcon } from '../Buttons/Buttons'
 import Modal from '../Modal/Modal'
 import styles from './conversations.module.css'
 
+const s = [
+  {
+    recipients: ['5f17e', 'f2328'],
+    messages: [
+      { sender: '5f17e', message: 'hola', time: 1614707938918 },
+      { sender: 'f2328', message: 'Hey', time: 1614707987000 },
+      {
+        sender: 'f2328',
+        message: 'Hey sup?, It seems that works, Its amazing',
+        time: 1614708845464,
+      },
+    ],
+  },
+  { recipients: 2, messages: [] },
+  { recipients: 2, messages: [] },
+]
+
 const Conversations = () => {
   const [id, setId] = useLocalStorage('id')
 
@@ -21,7 +38,10 @@ const Conversations = () => {
   const [selectedContactIds, setSelectedContactIds] = useState([])
 
   const onModalOpen = () => setIsModalOpen(true)
-  const onModalClose = () => setIsModalOpen(false)
+  const onModalClose = () => {
+    setSelectedContactIds([])
+    setIsModalOpen(false)
+  }
 
   const handleClickCopy = () => {
     setIsCopyActive(true)
@@ -32,7 +52,8 @@ const Conversations = () => {
   }
 
   const callBack = () => {
-    createConversation(selectedContactIds.push(id))
+    createConversation([...selectedContactIds, id])
+    setSelectedContactIds([])
     onModalClose()
   }
 

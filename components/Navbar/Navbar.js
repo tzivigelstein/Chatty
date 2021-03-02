@@ -28,7 +28,7 @@ const Navbar = ({ recipients, LeftComponent, RightComponent }) => {
       </div>
       <div className={styles.nav__title_container}>
         <span className={styles.title_container__title}>
-          {recipients.map(r => r.name).join(', ')}
+          {Array.isArray(recipients) && recipients.map(r => r.name).join(', ')}
         </span>
 
         {isTyping && (
