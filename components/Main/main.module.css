@@ -1,0 +1,16 @@
+.main {
+  width: 75vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+  .active {
+    width: 100%;
+  }
+
+  .not_active {
+    display: none;
+  }
+}

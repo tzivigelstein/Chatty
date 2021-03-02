@@ -1,0 +1,10 @@
+.back_button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__back_button_title {
+  color: #2165d9;
+  font-size: 1rem;
+}

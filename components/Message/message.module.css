@@ -1,0 +1,37 @@
+.message_container {
+  width: max-content;
+  max-width: 50%;
+  padding: 0.5rem 0.7rem;
+  background-color: #fbfbfb;
+  border-radius: 0 10px 10px 10px;
+  color: #222;
+  display: flex;
+  margin: 0.2rem 1rem;
+  box-shadow: 0px 4px 10px -8px #222;
+}
+
+#i {
+  align-self: flex-end;
+  border-radius: 10px 0 10px 10px;
+}
+
+.message_container__content {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  align-self: center;
+  margin-right: 0.6rem;
+  word-break: keep-all;
+}
+
+.message_container__time {
+  font-size: 0.7rem;
+  align-self: flex-end;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .message_container {
+    max-width: 70%;
+  }
+}

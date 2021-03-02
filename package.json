@@ -1,15 +1,32 @@
 {
-  "name": "chat-next",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "10.0.7",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
-  }
+    "name": "chat",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.11.9",
+        "@testing-library/react": "^11.2.5",
+        "@testing-library/user-event": "^12.7.1",
+        "axios": "^0.21.1",
+        "next": "10.0.4",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "react-scripts": "4.0.1",
+        "short-id": "0.1.0-1",
+        "socket.io-client": "^3.1.1",
+        "web-vitals": "^0.2.4"
+    },
+    "devDependencies": {
+        "prettier": "^2.2.1"
+    },
+    "scripts": {
+        "dev": "next dev -p 3080",
+        "build": "next build",
+        "start": "next start"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    }
 }

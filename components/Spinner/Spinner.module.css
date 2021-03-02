@@ -1,0 +1,43 @@
+.spinner_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner_container__spinner {
+  position: relative;
+}
+
+.spinner_container__00 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid;
+  border-radius: 50%;
+  border-right: 3px solid transparent !important;
+  animation: spin 0.65s ease-in-out infinite;
+  z-index: 1;
+}
+
+.spinner_container__01 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid;
+  border-radius: 50%;
+  border-left: 3px solid transparent !important;
+  animation: reverse-spin 0.65s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverse-spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}

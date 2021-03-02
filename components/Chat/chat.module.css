@@ -1,0 +1,39 @@
+.chat_container {
+  padding: 0.7rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chat_container__image_container {
+  width: 49px;
+  height: 49px;
+  background-color: #999;
+  border-radius: 50%;
+}
+
+.image_container__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.chat_container__info_container {
+  margin-left: 1rem;
+  flex: 1 0 auto;
+  min-width: 30px;
+  min-height: 10px;
+}
+
+.info_container__name {
+  color: #222;
+  margin: 0;
+  font-weight: 450;
+}
+
+.info_container__last_message {
+  color: #888;
+  margin: 0;
+  font-size: 14px;
+}
