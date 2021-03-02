@@ -68,8 +68,10 @@ export function ConversationProvider({ id, children }) {
   const formmatedConversations =
     Array.isArray(conversations) &&
     conversations.map((conversation, index) => {
+      console.log(conversation.recipients)
       const recipients =
         Array.isArray(conversations) &&
+        Array.isArray(conversation.recipients) &&
         conversation.recipients.map(recipient => {
           const contact = contacts.find(contact => contact.id === recipient)
           const name =

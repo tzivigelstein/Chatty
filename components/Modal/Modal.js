@@ -87,21 +87,24 @@ const Modal = ({
             )}
           </>
         )}
-
-        {Array.isArray(checkBoxOptions) &&
-          typeof checkBoxOptions !== 'undefined' &&
-          checkBoxOptions.map(checkBox => (
-            <div key={checkBox.id} style={{ color: '#696969' }}>
-              <input
-                value={checkBoxState.includes(checkBox.id)}
-                id={checkBox.id}
-                className="input_checkbox TODO"
-                type="checkbox"
-                onChange={() => handleCheckBoxChange(checkBox.id)}
-              />
-              <label htmlFor={checkBox.id}>{checkBox.name}</label>
-            </div>
-          ))}
+        <div>
+          {Array.isArray(checkBoxOptions) &&
+            typeof checkBoxOptions !== 'undefined' &&
+            checkBoxOptions.map(checkBox => (
+              <div className={styles.checkbox_container} key={checkBox.id}>
+                <input
+                  value={checkBoxState.includes(checkBox.id)}
+                  id={checkBox.id}
+                  className="input_checkbox TODO"
+                  type="checkbox"
+                  onChange={() => handleCheckBoxChange(checkBox.id)}
+                />
+                <label className={styles.checkbox_label} htmlFor={checkBox.id}>
+                  {checkBox.name}
+                </label>
+              </div>
+            ))}
+        </div>
 
         <div className={styles.modal__buttons_container}>
           <div

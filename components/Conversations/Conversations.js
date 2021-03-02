@@ -84,6 +84,7 @@ const Conversations = () => {
               <div className={styles.chat_container__info_container}>
                 <p className={styles.info_container__name}>
                   {Array.isArray(conversations) &&
+                    Array.isArray(conversation.recipients) &&
                     conversation.recipients.map(r => r.name).join(', ')}
                 </p>
               </div>

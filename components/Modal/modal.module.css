@@ -54,6 +54,15 @@
   width: 100%;
 }
 
+.checkbox_container {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.checkbox_label {
+  color: var(--gray);
+}
+
 @media (max-width: 768px) {
   .modal_container__modal {
     width: 90%;
