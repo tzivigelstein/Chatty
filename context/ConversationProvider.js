@@ -17,6 +17,7 @@ export function useConversations() {
 
 export function ConversationProvider({ id, children }) {
   const [conversations, setConversations] = useLocalStorage('conversations', [])
+
   const [selectedConversationIndex, setSelectedConversationIndex] = useState(
     null
   )
@@ -24,7 +25,6 @@ export function ConversationProvider({ id, children }) {
   const socket = useSocket()
 
   function createConversation(recipients) {
-    console.log(recipients)
     setConversations(prevConversations => {
       return [...prevConversations, { recipients, messages: [] }]
     })

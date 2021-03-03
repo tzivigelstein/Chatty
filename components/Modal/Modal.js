@@ -35,7 +35,6 @@ const Modal = ({
 
   const handleClick = e => {
     e.preventDefault()
-    checkBoxSet([])
     callBack()
   }
 
