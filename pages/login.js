@@ -104,12 +104,11 @@ const Login = () => {
         </form>
         <div className={styles.form_container__welcome_container}>
           <div className={styles.welcome_container__image_container}>
-            <img
-              className={styles.image_container__image}
-              src="/appreciation.svg"
-            />
+            <img className={styles.image_container__image} src="/welcome.svg" />
           </div>
-          <p className={styles.welcome_container__text}></p>
+          <p className={styles.welcome_container__text}>
+            Create an account or login to start chatting
+          </p>
         </div>
       </div>
     </div>

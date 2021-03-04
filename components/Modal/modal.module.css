@@ -1,5 +1,4 @@
 .modal_container {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -43,6 +42,22 @@
   padding: 0;
   margin: 0 0 2rem 0;
   text-align: center;
+}
+
+.modal_container__list_container {
+  margin: 0 0 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 80%;
+}
+
+.checkbox_container {
+  margin: 0.3rem 0 !important;
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal__buttons_container {

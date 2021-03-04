@@ -40,21 +40,22 @@ const Contacts = () => {
 
   return (
     <>
-      <Modal
-        modalConfig={{
-          title: 'Add your friend!',
-          helper: 'Ask him/her for the id 😄',
-          submit: 'Add',
-          cancel: 'Cancel',
-          inputPrimary: 'Your friend name',
-          inputSecondary: 'Your friend id',
-          callBack,
-          setData,
-          data,
-        }}
-        isModalOpen={isModalOpen}
-        onModalClose={onModalClose}
-      />
+      {isModalOpen && (
+        <Modal
+          modalConfig={{
+            title: 'Add your friend!',
+            helper: 'Ask him/her for the id 😄',
+            submit: 'Add',
+            cancel: 'Cancel',
+            inputPrimary: 'Your friend name',
+            inputSecondary: 'Your friend id',
+            callBack,
+            setData,
+            data,
+          }}
+          onModalClose={onModalClose}
+        />
+      )}
       <div className={styles.contacts_container}>
         <div className={styles.contacts_container__head_container}>
           <div

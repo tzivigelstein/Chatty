@@ -23,7 +23,7 @@ const Navbar = ({ recipients, LeftComponent, RightComponent }) => {
           onClick={() => selectConversationIndex(null)}
           className={styles.left_component_container}
         >
-          {LeftComponent && <LeftComponent title="Chats" />}
+          {LeftComponent && <LeftComponent stroke={'#09669f'} title="Chats" />}
         </div>
       </div>
       <div className={styles.nav__title_container}>

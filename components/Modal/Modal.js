@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import {} from 'react'
 import styles from './modal.module.css'
 import { CloseButton } from '../Buttons/Buttons'
 
 const Modal = ({
-  isModalOpen,
   onModalClose,
   modalConfig = {
     title: 'Your title here',
@@ -39,11 +38,13 @@ const Modal = ({
   }
 
   const handleCheckBoxChange = id => {
-    checkBoxSet(prev => {
-      if (prev.includes(id)) {
-        return prev.filter(prev => id !== prev)
+    checkBoxSet(prevSelected => {
+      if (prevSelected.includes(id)) {
+        return prevSelected.filter(prevId => {
+          return id !== prevId
+        })
       } else {
-        return [...prev, id]
+        return [...prevSelected, id]
       }
     })
   }
@@ -53,10 +54,7 @@ const Modal = ({
   }
 
   return (
-    <div
-      style={isModalOpen ? { display: 'flex' } : {}}
-      className={styles.modal_container}
-    >
+    <div className={styles.modal_container}>
       <div className={styles.modal_container__modal}>
         <CloseButton
           onClick={() => onModalClose()}
@@ -87,11 +85,14 @@ const Modal = ({
             )}
           </>
         )}
-        <div>
+        <div className={styles.modal_container__list_container}>
           {Array.isArray(checkBoxOptions) &&
             typeof checkBoxOptions !== 'undefined' &&
             checkBoxOptions.map(checkBox => (
               <div className={styles.checkbox_container} key={checkBox.id}>
+                <label className={styles.checkbox_label} htmlFor={checkBox.id}>
+                  {checkBox.name}
+                </label>
                 <input
                   value={checkBoxState.includes(checkBox.id)}
                   id={checkBox.id}
@@ -99,9 +100,6 @@ const Modal = ({
                   type="checkbox"
                   onChange={() => handleCheckBoxChange(checkBox.id)}
                 />
-                <label className={styles.checkbox_label} htmlFor={checkBox.id}>
-                  {checkBox.name}
-                </label>
               </div>
             ))}
         </div>

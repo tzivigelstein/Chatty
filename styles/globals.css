@@ -16,14 +16,14 @@ html {
 
 body {
   margin: 0;
-  color: #eee;
-  background-color: #eee;
+  color: var(--black);
+  background-color: var(--white);
   height: 100%;
   overflow: hidden;
 }
 
 :root {
-  --white: #ffe;
+  --white: #eee;
   --black: #222;
   --gray: #696969;
   --blue: #1da0f2;

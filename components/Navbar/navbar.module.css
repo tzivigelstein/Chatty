@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: #f1eeeb;
+  background-color: var(--white);
 }
 
 #nav__left_component_container_hide {
@@ -41,11 +41,11 @@
 .title_container__title {
   font-weight: bold;
   font-size: 1rem;
-  color: #222;
+  color: var(--black);
 }
 
 .title_container__typing {
-  color: #2165d9;
+  color: var(--dark-blue);
   font-size: 0.6rem;
 }
 

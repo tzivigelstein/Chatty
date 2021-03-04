@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   padding: 0.6rem 0;
-  background-color: #f1eeeb;
+  background-color: var(--white);
 }
 
 .actions_container__input_container {
@@ -14,7 +14,8 @@
 .input_container__input {
   padding: 0.7rem 0.6rem;
   flex: 1 0 auto;
-  background-color: #fff;
+  background-color: var(--white);
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   border-radius: 25px;
   border: none;
   outline: none;
@@ -24,14 +25,14 @@
 }
 
 .input_container__input::placeholder {
-  color: #898989;
+  color: var(--gray);
 }
 
 .input_container__action_button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 1rem;
+  margin-right: 1.3rem;
 }
 
 .action_button__button_container {

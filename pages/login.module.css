@@ -9,7 +9,7 @@
   backdrop-filter: blur(10px);
   background-color: var(--transparent);
   width: 70%;
-  box-shadow: 0 5px 20px -20px var(--black);
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   border-radius: 10px;
   display: flex;
 }
@@ -27,6 +27,7 @@
   color: var(--black);
   font-size: 1.6rem;
   text-align: center;
+  margin-top: 0;
 }
 
 .form__helper_text {
@@ -46,10 +47,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .welcome_container__image_container {
-  width: 100%;
+  width: 60%;
 }
 
 .image_container__image {
@@ -59,6 +61,7 @@
 .welcome_container__text {
   color: var(--gray);
   padding: 0 3rem;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -74,5 +77,9 @@
 
   .form_container__welcome_container {
     display: none;
+  }
+
+  .form__heading_text {
+    margin: 0.6rem 0;
   }
 }

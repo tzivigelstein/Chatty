@@ -40,7 +40,7 @@ const Controls = () => {
           onClick={handleClick}
           className={styles.action_button__button_container}
         >
-          <SendButton width={24} height={24} />
+          <SendButton stroke={'#1da0f2'} width={24} height={24} />
         </div>
       </div>
     </div>

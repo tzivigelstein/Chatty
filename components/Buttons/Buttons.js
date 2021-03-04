@@ -7,7 +7,7 @@ export const SendButton = props => {
       viewBox="0 0 24 24"
       width={24}
       height={24}
-      stroke="#2165d9"
+      stroke="#eee"
       strokeWidth={2}
       fill="none"
       strokeLinecap="round"
@@ -27,9 +27,9 @@ export const BackButton = props => {
         viewBox="0 0 24 24"
         width={24}
         height={24}
-        stroke="#2165D9"
+        stroke="#eee"
         strokeWidth={2}
-        fill="currentColor"
+        fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
         {...props}

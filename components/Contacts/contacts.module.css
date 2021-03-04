@@ -30,9 +30,9 @@
 .head_container__tooltip {
   position: fixed;
   display: none;
-  background-color: var(--transparent);
+  background-color: var(--white);
   color: #fff;
-  box-shadow: 0 10px 10px -20px var(--black);
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   text-align: center;
   padding: 0.5rem;
   border-radius: 6px;

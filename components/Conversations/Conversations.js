@@ -59,20 +59,21 @@ const Conversations = () => {
 
   return (
     <>
-      <Modal
-        modalConfig={{
-          title: 'Create a new chat',
-          helper: 'Secret tip: You can create more than 2 people chats 🤫',
-          submit: 'Create',
-          cancel: 'Cancel',
-          checkBoxOptions: contacts,
-          checkBoxState: selectedContactIds,
-          checkBoxSet: setSelectedContactIds,
-          callBack: callBack,
-        }}
-        isModalOpen={isModalOpen}
-        onModalClose={onModalClose}
-      />
+      {isModalOpen && (
+        <Modal
+          modalConfig={{
+            title: 'Create a new chat',
+            helper: 'Secret tip: You can create more than 2 people chats 🤫',
+            submit: 'Create',
+            cancel: 'Cancel',
+            checkBoxOptions: contacts,
+            checkBoxState: selectedContactIds,
+            checkBoxSet: setSelectedContactIds,
+            callBack: callBack,
+          }}
+          onModalClose={onModalClose}
+        />
+      )}
       <div className={styles.conversations_container}>
         <div className={styles.conversations_container__head_container}>
           <div
