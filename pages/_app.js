@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="shortcut icon" href="/icon.png" type="image/png" />
-        <title>Chat</title>
+        <title>Chatty</title>
       </Head>
       <SocketProvider id={id}>
         <ContactsProvider>
